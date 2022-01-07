@@ -1,4 +1,3 @@
-from _typeshed import Self
 from genericpath import exists
 import os
 from posixpath import join
@@ -21,7 +20,7 @@ class Cars(VisionDataset):
     img_floder = ["car_ims"]
     
     def __init__(self, root: str, train: bool=True, transform=None, target_transform=None, download=False):
-        super().__init__(root, transform=transform, target_transform=target_transform)
+        super(Cars, self).__init__(root, transform=transform, target_transform=target_transform)
 
         self.loader = default_loader
         self.train = train
